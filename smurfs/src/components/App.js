@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import * as reducers from './state/reducers';
 import { getSmurf, addSmurf } from './state/actionCreators';
 import SmurfForm from './Form/SmurfForm';
+import SmurfList from './Form/SmurfList';
 
 const monsterReducer = combineReducers({
   smurf: reducers.smurfReducer,
@@ -43,6 +44,7 @@ class App extends Component {
           <div>Start inside of your `src/index.js` file!</div>
           <div>Have fun!</div>
           <SmurfForm />
+          <SmurfList />
         </div>
       </Provider>
     );
