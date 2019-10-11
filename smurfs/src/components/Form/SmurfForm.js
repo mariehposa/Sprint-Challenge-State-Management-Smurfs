@@ -1,9 +1,16 @@
 import React from 'react';
 import {Formik, Field} from 'formik';
 
+const initialFormValues = {
+    name: '',
+    height: '',
+    age: '',
+}
+
 export default function SmurfForm () {
     return (
-       <Formik>
+       <Formik
+           initialValues={initialFormValues}
            render={props => {
                return(
                    <Form>
@@ -14,6 +21,6 @@ export default function SmurfForm () {
                    </Form>
                )
            }}
-       </Formik>
+        />
     );
 }
