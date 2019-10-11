@@ -10,7 +10,7 @@ export function SmurfList ({smurf, getSmurf}) {
     return (
         <div>
             {
-                smurf.map(features => <SmurfCard key={features.id} smurv= {features} />)
+                smurf.map(features => <SmurfCard key={features.id} smurv= {features} /> <button>Delete</button>)
             }
         </div>
     );
