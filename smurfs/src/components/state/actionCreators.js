@@ -11,6 +11,8 @@ export function addSmurf(smurfs) {
 }
 
 export const getSmurf = () => dispatch => {
+    console.log('nonsense');
+    
     axios.get(smurfApi)
         .then(res => {
             console.log(res.data);

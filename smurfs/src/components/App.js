@@ -4,7 +4,7 @@ import thunk from 'redux-thunk';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from './state/reducers';
-import 
+import { getSmurf } from './state/actionCreators';
 
 const monsterReducer = combineReducers({
   smurf: reducers.smurfReducer,
@@ -12,14 +12,25 @@ const monsterReducer = combineReducers({
 
 const store = createStore(
   monsterReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  {},
+  compose(
+    applyMiddleware(thunk),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  ),
 );
 class App extends Component {
 
   componentDidMount() {
-
+    // console.log(this.props);
+    
+    // this.getter()
   }
 
+  // getter = () => {
+  //   console.log('nonsense');
+    
+  //   getSmurf()
+  // }
   render() {
     return (
       <Provider store={store}>
