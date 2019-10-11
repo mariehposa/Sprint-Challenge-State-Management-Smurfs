@@ -1,5 +1,7 @@
 import React from 'react';
-import {Formik, Field} from 'formik';
+import {Formik, Field, Form} from 'formik';
+import { connect } from "react-redux";
+import * as actionCreators from "../state/actionCreators";
 
 const initialFormValues = {
     name: '',
@@ -7,10 +9,22 @@ const initialFormValues = {
     age: '',
 }
 
-export default function SmurfForm () {
+export function SmurfForm ({addSmurf}) {
+    const AddForm = (formValues, actions) => {
+        const newValue = {
+          name: formValues.name,
+          height: formValues.height,
+          age: formValues.age,
+          id: Date.now(),
+        }
+      
+        addSmurf(newValue)
+        actions.resetForm()
+      }
     return (
        <Formik
            initialValues={initialFormValues}
+           onSubmit={AddForm}
            render={props => {
                return(
                    <Form>
@@ -24,3 +38,8 @@ export default function SmurfForm () {
         />
     );
 }
+
+export default connect(
+    state => state, 
+    actionCreators
+)(SmurfForm)

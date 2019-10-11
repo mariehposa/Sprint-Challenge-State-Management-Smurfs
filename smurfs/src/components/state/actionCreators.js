@@ -4,6 +4,8 @@ import * as types from './actionTypes';
 const smurfApi = 'http://localhost:3333/smurfs'
 
 export function addSmurf(smurfs) {
+    console.log('nonsense');
+
     return {
         type: types.ADD_SMURF,
         payload: smurfs,

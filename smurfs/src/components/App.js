@@ -4,7 +4,8 @@ import thunk from 'redux-thunk';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from './state/reducers';
-import { getSmurf } from './state/actionCreators';
+import { getSmurf, addSmurf } from './state/actionCreators';
+import SmurfForm from './Form/SmurfForm';
 
 const monsterReducer = combineReducers({
   smurf: reducers.smurfReducer,
@@ -18,6 +19,8 @@ const store = createStore(
     window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
   ),
 );
+
+
 class App extends Component {
 
   componentDidMount() {
@@ -39,6 +42,7 @@ class App extends Component {
           <div>Welcome to your state management version of Smurfs!</div>
           <div>Start inside of your `src/index.js` file!</div>
           <div>Have fun!</div>
+          <SmurfForm />
         </div>
       </Provider>
     );
