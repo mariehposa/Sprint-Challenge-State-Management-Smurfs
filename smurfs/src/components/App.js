@@ -7,7 +7,12 @@ import * as reducers from './state/reducers';
 
 const monsterReducer = combineReducers({
   smurf: reducers.smurfReducer,
-})
+});
+
+const store = createStore(
+  monsterReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
 class App extends Component {
 
   render() {
