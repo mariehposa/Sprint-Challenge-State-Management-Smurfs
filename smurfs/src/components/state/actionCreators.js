@@ -25,3 +25,9 @@ export const getSmurf = () => dispatch => {
         })
 }
 
+export const postSmurf = (smurfs) => dispatch => {
+    axios.post(smurfApi, smurfs)
+        .then((res) => {
+            dispatch(addSmurf(res.data))
+        })
+}

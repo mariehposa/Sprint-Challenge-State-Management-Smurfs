@@ -1,9 +1,12 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from "react-redux";
 import SmurfCard from './SmurfCard';
 import * as actionCreators from "../state/actionCreators";
 
-export function SmurfList ({smurf}) {
+export function SmurfList ({smurf, getSmurf}) {
+    useEffect( () => {
+        getSmurf()
+    }, [])
     return (
         <div>
             {

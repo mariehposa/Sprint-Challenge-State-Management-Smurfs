@@ -9,7 +9,7 @@ const initialFormValues = {
     age: '',
 }
 
-export function SmurfForm ({addSmurf}) {
+export function SmurfForm ({postSmurf}) {
     const AddForm = (formValues, actions) => {
         const newValue = {
           name: formValues.name,
@@ -18,7 +18,7 @@ export function SmurfForm ({addSmurf}) {
           id: Date.now(),
         }
       
-        addSmurf(newValue)
+        postSmurf(newValue)
         actions.resetForm()
       }
     return (

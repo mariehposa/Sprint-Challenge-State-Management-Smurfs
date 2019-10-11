@@ -8,12 +8,12 @@ const initialValue = [
       id: 0
     }
   ];
-export function smurfReducer (state = initialValue, action) {
+export function smurfReducer (state = [], action) {
     switch (action.type) {
         case types.ADD_SMURF:
             console.log(action.payload);
             const newSmurf = (action.payload)
-            return [...state, newSmurf]
+            return [...newSmurf]
         default:
             return state;
     }
