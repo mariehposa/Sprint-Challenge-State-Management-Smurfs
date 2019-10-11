@@ -1,7 +1,6 @@
 import * as types from './actionTypes';
 
-
-const initialValue = 0;
+const initialValue = [];
 export function smurfReducer (state = initialValue, action) {
     switch (action.type) {
         case types.ADD_SMURF:
