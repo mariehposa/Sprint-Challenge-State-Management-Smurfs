@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import * as actionCreators from "../state/actionCreators";
 
-export function SmurfCard ({smurf}) {
+export function SmurfCard ({smurv}) {
     return (
         <div>
-            <h2>{smurf.name}</h2>
-            <p>{smurf.height}</p>
-            <dt>{smurf.age}</dt>
+            <h2>{smurv.name}</h2>
+            <p>{smurv.height}</p>
+            <dt>{smurv.age}</dt>
         </div>
     );
 }

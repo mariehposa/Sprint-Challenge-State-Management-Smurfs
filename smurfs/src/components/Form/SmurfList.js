@@ -7,7 +7,7 @@ export function SmurfList ({smurf}) {
     return (
         <div>
             {
-                smurf.map(features => <SmurfCard key={features.id} smurf= {features} />)
+                smurf.map(features => <SmurfCard key={features.id} smurv= {features} />)
             }
         </div>
     );

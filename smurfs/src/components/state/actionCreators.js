@@ -24,3 +24,4 @@ export const getSmurf = () => dispatch => {
             console.log(err.message)
         })
 }
+
