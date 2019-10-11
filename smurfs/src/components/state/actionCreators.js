@@ -12,6 +12,13 @@ export function addSmurf(smurfs) {
     }
 }
 
+export const deleteSmurf = (id) => dispatch => {
+    axios.delete(`${smurfApi}/${id}`)
+        .then(res => {
+            dispatch(addSmurf(res.data))
+        })
+}
+
 export const getSmurf = () => dispatch => {
     console.log('nonsense');
     

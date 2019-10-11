@@ -14,6 +14,9 @@ export function smurfReducer (state = [], action) {
             console.log(action.payload);
             const newSmurf = (action.payload)
             return [...newSmurf]
+        // case types.REMOVE_SMURF:
+        //     const smurfClickedOn  = action.payload.;
+        //     return
         default:
             return state;
     }
