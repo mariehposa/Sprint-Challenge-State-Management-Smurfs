@@ -4,7 +4,6 @@ import thunk from 'redux-thunk';
 import { combineReducers, createStore, compose, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import * as reducers from './state/reducers';
-import { getSmurf, addSmurf } from './state/actionCreators';
 import SmurfForm from './Form/SmurfForm';
 import SmurfList from './Form/SmurfList';
 
@@ -24,17 +23,17 @@ const store = createStore(
 
 class App extends Component {
 
-  componentDidMount() {
-    // console.log(this.props);
+  // componentDidMount() {
+  //   // console.log(this.props);
     
-    // this.getter()
-  }
-
-  // getter = () => {
-  //   console.log('nonsense');
-    
-  //   getSmurf()
+  //   // this.getter()
   // }
+
+  // // getter = () => {
+  // //   console.log('nonsense');
+    
+  // //   getSmurf()
+  // // }
   render() {
     return (
       <Provider store={store}>

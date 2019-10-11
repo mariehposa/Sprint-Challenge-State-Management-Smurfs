@@ -8,7 +8,7 @@ export function SmurfCard ({smurv, deleteSmurf}) {
             <h2>{smurv.name}</h2>
             <p>{smurv.height}</p>
             <dt>{smurv.age}</dt>
-            <button onClick ={ () => deleteSmurf(smurv.id) }>Delete</button>
+            <button style={{backgroundColor: 'red'}} onClick ={ () => deleteSmurf(smurv.id) }>Delete</button>
         </div>
     );
 }

@@ -31,7 +31,7 @@ export function SmurfForm ({postSmurf}) {
                        <Field name="name" type="text" placeholder="Enter your name"/>
                        <Field name="height" type="text" placeholder="Enter your height"/>
                        <Field name="age" type="text" placeholder="Enter your age"/> 
-                       <button type="submit">Add</button>
+                       <button type="submit" style={{backgroundColor: 'green'}}>Add</button>
                    </Form>
                )
            }}
